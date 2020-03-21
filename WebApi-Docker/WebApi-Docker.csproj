@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
     <RootNamespace>WebApi_Docker</RootNamespace>
     <UserSecretsId>c2fb3d38-dfc7-46c3-ae65-3d9da6c5abec</UserSecretsId>
     <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
