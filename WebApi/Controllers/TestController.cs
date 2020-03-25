@@ -10,6 +10,7 @@ namespace WebApi.Controllers
     [Route("[controller]")]
     public class TestController : ControllerBase
     {
+
         [HttpGet]
         public IActionResult Get()
         {
