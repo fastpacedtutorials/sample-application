@@ -14,7 +14,7 @@ namespace WebApi.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok("Test #1");
+            return Ok("Test #2");
         }
     }
 }
