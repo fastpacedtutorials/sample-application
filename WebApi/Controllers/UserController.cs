@@ -24,11 +24,11 @@ namespace WebApi.Controllers
         {
             try
             {
-                return new OkObjectResult(_da.SelectList<User>("select * from user"));
+                return new OkObjectResult(_da.SelectList<User>("Select * from [User]"));
             }
             catch (Exception ex)
             {
-                return new StatusCodeResult(StatusCodes.Status500InternalServerError);
+                return new BadRequestObjectResult(ex.Message);
             }
         }
     }
