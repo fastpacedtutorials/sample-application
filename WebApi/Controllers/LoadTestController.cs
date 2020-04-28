@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Security.Cryptography.Pkcs;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,32 +16,37 @@ namespace WebApi.Controllers
     [ApiController]
     public class LoadTestController : ControllerBase
     {
+        Random rand = new Random();
+        List<Thread> threads = new List<Thread>();
+
         [HttpGet]
         public IActionResult Get()
         {
             try
             {
-                return new OkObjectResult(RandomString(256, true));
+                var futureTime = DateTime.Now.AddSeconds(5);
+                while (DateTime.Now < futureTime)
+                {
+                    threads.Add(new Thread(new ThreadStart(KillCore)));
+                }
+                return new OkObjectResult(DateTime.Now);
             }
             catch (Exception ex)
             {
-                return new BadRequestObjectResult(ex.Message);
+                throw ex;
             }
         }
 
-        public string RandomString(int size, bool lowerCase)
+        public void KillCore()
         {
-            StringBuilder builder = new StringBuilder();
-            Random random = new Random();
-            char ch;
-            for (int i = 0; i < size; i++)
+            var futureTime = DateTime.Now.AddSeconds(5);
+            long num = 0;
+            while (DateTime.Now < futureTime)
             {
-                ch = Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 65)));
-                builder.Append(ch);
+                num += rand.Next(100, 1000);
+                if (num > 1000000) { num = 0; }
             }
-            if (lowerCase)
-                return builder.ToString().ToLower();
-            return builder.ToString();
         }
+
     }
 }
