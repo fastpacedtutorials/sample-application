@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi-Docker", "WebApi-Doc
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Database", "Database\Database.sqlproj", "{A19095D6-C618-46D2-BCBE-987E792EC3C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{B3F2FDB5-AB4D-4CA0-BE43-2D36112DCF0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{B3F2FDB5-AB4D-4CA0-BE43-2D36112DCF0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{03C5AB01-7FEF-4FD7-B73F-6BD194BF6383}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{03C5AB01-7FEF-4FD7-B73F-6BD194BF6383}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebJob", "WebJob\WebJob.csproj", "{4ED70CBB-41A3-4D72-9430-37B42650BEC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{03C5AB01-7FEF-4FD7-B73F-6BD194BF6383}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03C5AB01-7FEF-4FD7-B73F-6BD194BF6383}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03C5AB01-7FEF-4FD7-B73F-6BD194BF6383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ED70CBB-41A3-4D72-9430-37B42650BEC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ED70CBB-41A3-4D72-9430-37B42650BEC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ED70CBB-41A3-4D72-9430-37B42650BEC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ED70CBB-41A3-4D72-9430-37B42650BEC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
