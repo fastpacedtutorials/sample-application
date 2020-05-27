@@ -9,7 +9,6 @@ namespace WebJob
             Console.WriteLine($"WebJob srarted running at {DateTime.Now}");
             Console.WriteLine($"Hello world from WebJob");
             Console.WriteLine($"WebJob finished running at {DateTime.Now}");
-
         }
     }
 }
